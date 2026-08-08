@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(160deg, #fff8f5, #ffeaf1);
+    color: #3d3035;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Welcome */
+
+.welcome-screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.sun {
+    font-size: 70px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.small-text {
+    color: #a27b86;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.welcome-screen h1 {
+    font-size: 38px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.welcome-screen h1 span {
+    color: #e85d83;
+}
+
+.intro {
+    color: #77666d;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    background: #e85d83;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(232, 93, 131, 0.25);
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* Sections */
+
+.letter-section,
+.photos-section,
+.game-section,
+.final-section {
+    width: 92%;
+    max-width: 430px;
+    margin: auto;
+    min-height: 100vh;
+    padding: 70px 0 40px;
+    text-align: center;
+}
+
+.envelope {
+    font-size: 75px;
+    margin-bottom: 15px;
+    animation: float 2.5s ease-in-out infinite;
+}
+
+h2 {
+    color: #df5278;
+    margin-bottom: 20px;
+}
+
+/* Letter */
+
+.letter {
+    background: rgba(255,255,255,0.8);
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(90,50,60,0.08);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.letter p {
+    margin-bottom: 16px;
+}
+
+.letter strong {
+    color: #df5278;
+    font-size: 19px;
+}
+
+/* Photos */
+
+.section-label {
+    color: #a27b86;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.photos-section h2 {
+    margin-bottom: 25px;
+}
+
+.photo-card {
+    background: white;
+    padding: 12px;
+    border-radius: 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(70,40,50,0.1);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+    border-radius: 17px;
+    background: #f8f1f3;
+}
+
+.photo-caption {
+    padding: 16px 8px 8px;
+}
+
+.photo-caption h3 {
+    color: #df5278;
+    margin-bottom: 8px;
+}
+
+.photo-caption p {
+    color: #77666d;
+    line-height: 1.6;
+}
+
+/* Game */
+
+.game-instruction {
+    color: #77666d;
+    margin-bottom: 15px;
+}
+
+.score {
+    font-weight: 700;
+    color: #df5278;
+    margin-bottom: 20px;
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    background: rgba(255,255,255,0.75);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.04);
+}
+
+.game-heart {
+    position: absolute;
+    font-size: 38px;
+    cursor: pointer;
+    user-select: none;
+    animation: heartPulse 0.8s infinite alternate;
+}
+
+/* Final */
+
+.final-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.celebration {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.final-section h1 {
+    color: #df5278;
+    margin-bottom: 25px;
+}
+
+.final-card {
+    background: white;
+    padding: 28px;
+    border-radius: 25px;
+    line-height: 1.8;
+    box-shadow: 0 10px 30px rgba(70,40,50,0.1);
+}
+
+.final-card h2 {
+    margin: 15px 0;
+}
+
+.ending {
+    color: #df5278;
+    font-weight: 600;
+    margin-top: 18px;
+}
+
+.floating-hearts {
+    margin-top: 25px;
+    font-size: 25px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animations */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes heartPulse {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1.15);
+    }
+}
+
+/* iPhone */
+
+@media (max-width: 480px) {
+
+    .welcome-screen h1 {
+        font-size: 32px;
+    }
+
+    .sun {
+        font-size: 60px;
+    }
+
+    .letter-section,
+    .photos-section,
+    .game-section,
+    .final-section {
+        padding-top: 55px;
+    }
+
+    .game-area {
+        height: 400px;
+    }
+}
